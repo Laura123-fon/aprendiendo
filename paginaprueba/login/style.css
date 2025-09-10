@@ -1,0 +1,349 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px 30px;
+  background: #F7F7F7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+header .logo {
+  display: flex;
+  height: 10vh;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #555;
+}
+
+/* HERO SECTION WITH FORMS */
+.hero {
+  height: 100vh;
+  background: url("https://wallpapers.com/images/hd/fruits-and-vegetables-pictures-7p6xr10qmploc97e.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+/* FORM STYLES */
+.form-container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.form-content h2 {
+  color: #2E8B57;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-content label {
+  color: #666666;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-content input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.form-content input:focus {
+  outline: none;
+  border-color: #2E8B57;
+}
+
+.submit-btn {
+  padding: 15px;
+  background: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  background: #246a44;
+}
+
+.switch-form {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.switch-form a {
+  color: #2E8B57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-form a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* LANDING PAGE STYLES */
+.huertohogar-page {
+  min-height: 100vh;
+  background: #F7F7F7;
+  color: #333;
+}
+
+.hero-landing {
+  height: 100vh;
+  background: url("https://wallpapers.com/images/hd/fruits-and-vegetables-pictures-7p6xr10qmploc97e.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  position: relative;
+}
+
+.hero-landing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2e8b57;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #246a44;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: white;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-section h3 {
+  color: #2E8B57;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.map-section ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.map-section ul li {
+  background: #2E8B57;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+#huertoHogarMap {
+  background: linear-gradient(45deg, #2E8B57, #4CAF50);
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #6a360a;
+}
+
+/* MAIN FOOTER */
+.main-footer {
+  padding: 2rem;
+  background: #333333;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* SOCIAL FOOTER (FIXED) */
+footer .social {
+  position: fixed;
+  bottom: 15px;
+  left: 20px;
+  background: transparent; /* 🔹 sin fondo */
+  padding: 0;
+  border-radius: 0;
+}
+
+footer .social {
+  display: flex;
+  gap: 10px;
+}
+
+footer .social a img {
+  width: 25px;   /* 🔹 tamaño pequeño */
+  height: 25px;
+  filter: brightness(0) invert(1); /* 🔹 convierte el logo en blanco */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px;
+  }
+  
+  header nav ul {
+    gap: 10px;
+  }
+  
+  header nav ul li a {
+    font-size: 12px;
+  }
+  
+  .form-container {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .hero-landing {
+    padding-left: 20px;
+  }
+  
+  .logout-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}

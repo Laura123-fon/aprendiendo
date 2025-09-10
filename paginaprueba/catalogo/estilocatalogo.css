@@ -1,0 +1,140 @@
+
+*{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #F7F7F7;
+    font-style: normal;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section{
+    width: 100vw;
+    height: 50vh;
+}
+
+#top{
+    background-color: #d7e3f1;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://wallpapers.com/images/hd/fruits-and-vegetables-pictures-7p6xr10qmploc97e.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: plon;
+    animation-duration: 1s;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px 30px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+header .logo {
+  display: flex;
+  height: 10vh;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #555;
+}
+
+#bottom{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    margin-top: -3rem; 
+    position: relative;
+    z-index: 5;
+}
+
+.card{
+    width: 15vw;
+    box-shadow: 0px 0px 7px #000000;
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    height: 29vw;
+    margin-top: 0; 
+    background-color: #2e8b57;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    animation-name: subir;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+@keyframes subir {
+    from{
+        opacity: 0;
+        margin-top: 2rem;
+    }
+    to{
+        opacity: 1;
+        margin-top: -3rem;
+    }
+}
+
+@keyframes plon {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.card:nth-child(2){
+    animation-delay: 200ms;
+}
+
+.card:nth-child(3){
+    animation-delay: 300ms;
+}
+
+.card:nth-child(4){
+    animation-delay: 400ms;
+}
+
+.card:hover{
+    background-color: #005500;
+    transition-duration: 200ms;
+    transform: translateY(-1rem);
+}
+
+.number{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0e3508;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card > p{
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: justify;
+}

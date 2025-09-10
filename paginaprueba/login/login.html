@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro/Login - Huerto Hogar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <img src="E:/paginaprueba/imagenes/image-removebg-preview.png" alt="HuertoHogar Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="E:/paginaprueba/nosotros/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="#"><i class="fas fa-briefcase"></i> TRABAJO</a></li>
+                <li><a href="E:/paginaprueba/index/index.html">INICIO</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> CARRITO</a></li>
+                <li><a href="https://www.bilbaolabs.cl/"><i class="fas fa-envelope"></i> CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION WITH FORMS -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        
+        <!-- FORMULARIO DE REGISTRO -->
+        <div class="form-container" id="register-container">
+            <div class="form-content">
+                <h2>Crear una cuenta</h2>
+                <form id="registerForm">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" placeholder="usuario@correo.com" required>
+
+                    <label for="clave1">Contraseña:</label>
+                    <input type="password" id="clave1" placeholder="Contraseña" required>
+
+                    <label for="clave2">Repetir contraseña:</label>
+                    <input type="password" id="clave2" placeholder="Repetir contraseña" required>
+
+                    <button type="submit" class="submit-btn">Registrarse</button>
+                </form>
+                <p class="switch-form">¿Ya tienes cuenta? <a href="#" id="goLogin">Iniciar sesión</a></p>
+                <p id="errorRegistro" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- FORMULARIO DE LOGIN -->
+        <div class="form-container hidden" id="login-container">
+            <div class="form-content">
+                <h2>Iniciar sesión</h2>
+                <form id="loginForm">
+                    <label for="loginCorreo">Correo electrónico:</label>
+                    <input type="email" id="loginCorreo" required>
+
+                    <label for="loginClave">Contraseña:</label>
+                    <input type="password" id="loginClave" required>
+
+                    <button type="submit" class="submit-btn">Entrar</button>
+                </form>
+                <p class="switch-form">¿No tienes cuenta? <a href="#" id="goRegister">Registrarse</a></p>
+                <p id="errorLogin" class="error-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LANDING PAGE (ETO TA OCULTO) -->
+    <div id="landingPage" class="huertohogar-page hidden">
+        <div class="hero-landing">
+            <div class="hero-content">
+                <h1>BIENVENIDO A HUERTOHOGAR</h1>
+                <p>Empieza tus compras con nosotros a partir de hoy.</p>
+                <a href="#" class="btn btn-primary">Ir a Comprar</a>
+            </div>
+        </div>
+
+        <section class="about-section">
+            <div class="map-section">
+                <h3>Encuéntranos en nuestras tiendas físicas</h3>
+                <p>Estamos presentes en:</p>
+                <ul>
+                    <li>Santiago</li>
+                    <li>Puerto Montt</li>
+                    <li>Villarica</li>
+                    <li>Nacimiento</li>
+                    <li>Viña del Mar</li>
+                    <li>Valparaíso</li>
+                    <li>Concepción</li>
+                </ul>
+                <div id="huertoHogarMap" style="height: 400px; width: 100%;">
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <p>&copy;HuertoHogar. Todos los derechos reservados.</p>
+        </footer>
+
+        <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+    </div>
+
+    <!-- FOOTER SOCIAL (FIXED) -->
+    <footer class="social-footer">
+    <div class="social">
+        <li><a href="#"><i class="fas fa-user"></i><img src="https://cdn-icons-png.flaticon.com/256/87/87390.png" alt="Instagram"></a></li>
+        <li><a href="#"><i class="fas fa-th"></i><img src="https://cdn-icons-png.flaticon.com/256/20/20673.png" alt="facebook"></a></li>
+    </div>
+    </footer>
+
+    <script src="session.js"></script>
+</body>
+</html>
